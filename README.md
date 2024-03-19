@@ -3,4 +3,5 @@ The service of Jina flow is contianerized, the application script connects to th
 
 ```
 docker-compose -f docker-compose.yml up
+python vector-search.py
 ```

@@ -3,6 +3,18 @@ networks:
   jina-network:
     driver: bridge
 services:
+  # Encoder service(s)
+  encoder-rep-0:
+    image: jinaai/hub.executors.encoders.nlp.transformers-pytorch:latest  # Replace if needed
+    # ... other configurations (ports, environment variables)
+
+  
+
+  # Indexer service(s)
+  indexer-head:
+    image: jinaai/hub.executors.indexers.vector.faiss
+  
+
   gateway:
     image: registry.hubble.jina.ai/executors/k7xuf1u1:65f145ce314167b2aba55667
     entrypoint:
